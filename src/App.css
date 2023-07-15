@@ -1,0 +1,47 @@
+.m {
+  color: #6599bc;
+  background-color: #a0cfee;
+}
+
+.f {
+  color: #b33b7c;
+  background-color: #ffc6e4;
+}
+.card {
+  display: flex;
+  border-radius: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: xx-small;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+.card:hover {
+  transform: scale(120%);
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: 2px;
+  border-radius: 2rem;
+  border-style: solid;
+  border-bottom-color: #a0cfee;
+  border-left-color: #ffc6e4;
+  border-right-color: #a0cfee;
+  border-top-color: #ffc6e4;
+  padding: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.name-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
