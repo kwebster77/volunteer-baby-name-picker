@@ -4,6 +4,7 @@ import { names } from "./names";
 import NameCard from "./components/NameCard";
 import SearchInput from "./components/searchInput";
 import FavPicker from "./components/FavouritePicker";
+import FilterNames from "./components/FilterNames";
 
 const App = () => {
   const [namesList, setNamesList] = useState(names);
@@ -27,10 +28,19 @@ const removeFavs = (toRemove) => {
   setFavourites(favourites.filter((name) => name.id !== toRemove.id))
 }
 
+const handleFilter = (filterQuery) => {
+  if (filterQuery === "all"){
+    setNamesList(names);
+    return;
+  }
+  setNamesList(names.filter((baby) => baby.sex === filterQuery));
+}
+
   return ( 
   <div className = "App">
     <div className = "container">
     <SearchInput searchInput = {searchInput} handleSearch={handleSearch} />
+    <FilterNames handleClick={handleFilter}/>
     <FavPicker favourites={favourites} removeFavs={removeFavs}/>
 
   <div className = "name-container">
